@@ -1,0 +1,47 @@
+1. **DDL (Data Definition Language):**
+   - **CREATE:** Used to create database objects such as tables, indexes, views, etc.
+   - **ALTER:** Modifies the structure of existing database objects.
+   - **DROP:** Deletes database objects like tables, indexes, views, etc.
+   - **TRUNCATE:** Removes all records from a table, but keeps the table structure intact.
+   - **COMMENT:** Adds comments to the data dictionary.
+
+   Example of DDL commands:
+   ```sql
+   CREATE TABLE employees (
+       emp_id INT,
+       emp_name VARCHAR(50),
+       emp_dept VARCHAR(50)
+   );
+
+   ALTER TABLE employees
+   ADD emp_salary DECIMAL(10, 2);
+
+   DROP TABLE employees;
+
+   TRUNCATE TABLE employees;
+   ```
+
+2. **DML (Data Manipulation Language):**
+   - **SELECT:** Retrieves data from a database.
+   - **INSERT:** Adds new records into a table.
+   - **UPDATE:** Modifies existing records in a table.
+   - **DELETE:** Removes records from a table.
+
+   Example of DML commands:
+   ```sql
+   SELECT emp_name, emp_salary
+   FROM employees
+   WHERE emp_dept = 'IT';
+
+   INSERT INTO employees (emp_id, emp_name, emp_dept, emp_salary)
+   VALUES (1, 'John Doe', 'IT', 60000);
+
+   UPDATE employees
+   SET emp_salary = 65000
+   WHERE emp_name = 'John Doe';
+
+   DELETE FROM employees
+   WHERE emp_id = 1;
+   ```
+
+These commands form the backbone of SQL operations in DBMS. DDL focuses on defining the structure of your database objects, while DML is used for managing and manipulating the data within those objects.
