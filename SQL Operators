@@ -1,0 +1,93 @@
+### 1. Arithmetic Operators
+
+```sql
+-- Example: Add two columns and retrieve the result
+SELECT column1, column2, column1 + column2 AS sum_result
+FROM table_name;
+```
+
+### 2. Comparison Operators
+
+```sql
+-- Example: Retrieve rows where age is greater than 30
+SELECT *
+FROM users
+WHERE age > 30;
+
+-- Example: Retrieve rows where name is not 'John'
+SELECT *
+FROM users
+WHERE name != 'John';
+```
+
+### 3. Logical Operators
+
+```sql
+-- Example: Retrieve rows where age is greater than 30 and name is 'Alice'
+SELECT *
+FROM users
+WHERE age > 30 AND name = 'Alice';
+
+-- Example: Retrieve rows where age is less than 25 or name starts with 'J'
+SELECT *
+FROM users
+WHERE age < 25 OR name LIKE 'J%';
+```
+
+### 4. Concatenation Operator
+
+```sql
+-- Example: Concatenate first_name and last_name columns
+SELECT CONCAT(first_name, ' ', last_name) AS full_name
+FROM users;
+```
+
+### 5. LIKE Operator
+
+```sql
+-- Example: Retrieve rows where email starts with 'john'
+SELECT *
+FROM users
+WHERE email LIKE 'john%';
+
+-- Example: Retrieve rows where phone number ends with '1234'
+SELECT *
+FROM users
+WHERE phone_number LIKE '%1234';
+```
+
+### 6. IN Operator
+
+```sql
+-- Example: Retrieve rows where department is either 'IT' or 'HR'
+SELECT *
+FROM employees
+WHERE department IN ('IT', 'HR');
+```
+
+### 7. BETWEEN Operator
+
+```sql
+-- Example: Retrieve rows where salary is between 50000 and 80000
+SELECT *
+FROM employees
+WHERE salary BETWEEN 50000 AND 80000;
+```
+
+### 8. IS NULL Operator
+
+```sql
+-- Example: Retrieve rows where address is not provided (NULL)
+SELECT *
+FROM customers
+WHERE address IS NULL;
+```
+
+### 9. IS NOT NULL Operator
+
+```sql
+-- Example: Retrieve rows where email address is provided (not NULL)
+SELECT *
+FROM customers
+WHERE email IS NOT NULL;
+```
